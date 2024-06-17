@@ -4,8 +4,23 @@
 #git push
 #git pull
 
+import sqlite3 as sql
+from tkinter import *
+from tkinter import messagebox
 
-i = 0 
-while i < 10:
-    print(i)
-    i += 1
+try:
+    con = sql.connect('pin_your_note.db')
+    cur = con.cursor()
+    cur.execute("CREATE TABLE movie(title, year, score)")
+except:
+    print("oop something went wrong")
+    
+    
+def viewnotes():
+    return
+
+def updatenotes():
+    return
+
+def deletenotes():
+    return 
